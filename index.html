@@ -42,11 +42,11 @@
 							<div class="row">
 								<section class="col col-6">
 									<label class="input">
-										<input type="number" name="amount" id="amount" placeholder="">
+										<input type="number" name="amount" id="amount" placeholder="" oninput="resetSelect()">
 									</label>
 								</section>
 							
-								<section class="col col-6">
+								<section class="col col-6" onchange="resetSelect()">
 									<label class="select">
 										<select name="fromcur" id="fromcur">
 										
@@ -89,5 +89,12 @@
     </main>
 
     <script type="text/javascript" src="scripts/app.js"></script>
+	<script>
+		function resetSelect(){
+			document.getElementById("tocur").selectedIndex = 0;
+			document.getElementById("resultamount").setAttribute('value',"");
+		}
+    
+	</script>
   </body>
 </html>

@@ -50,16 +50,6 @@ document.getElementById("tocur").addEventListener('change', (e) => {
 	});
 });
 
-document.getElementById("fromcur").addEventListener('change', (e) => {
-	
-	document.getElementById("tocur").selectedIndex = 0;
-	document.getElementById("resultamount").setAttribute('value',"");
-});
 
-document.getElementById("amount").addEventListener('input', (e) => {
-	
-	document.getElementById("tocur").selectedIndex = 0;
-	document.getElementById("resultamount").setAttribute('value',"");
-});
 
 
