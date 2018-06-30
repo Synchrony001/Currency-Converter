@@ -1,4 +1,4 @@
-navigator.serviceWorker.register('/service-worker.js').then(function() {
+navigator.serviceWorker.register('service-worker.js').then(function() {
   console.log('Service Worker registered!');
 }).catch(function(){
   console.log('Registration Failed');
