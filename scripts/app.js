@@ -10,7 +10,23 @@ function getCurrencies() {
   fetch(url).then(function(response) {
     return response.json();
   }).then(function(data) {      
-    const values = data.results;    
+	
+	// sort by name
+	var sortedvalues = values.sort(function(a, b) {
+	  var nameA = a.currencyName.toUpperCase(); // ignore upper and lowercase
+	  var nameB = b.currencyName.toUpperCase(); // ignore upper and lowercase
+	  if (nameA < nameB) {
+		return -1;
+	  }
+	  if (nameA > nameB) {
+		return 1;
+	  }
+
+	  // names must be equal
+	  return 0;
+	});
+	
+	console.log(sortedvalues);
     let options = `<option value="0">Select Currency</option>`;
  
       for(var key in values){
